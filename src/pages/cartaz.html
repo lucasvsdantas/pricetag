@@ -13,25 +13,45 @@
         </section>
     </header>
     <main>
-        <section>
+        <section class="formulario" id="fundo-cartaz">
             <div>
                 <input type="text" placeholder="Insira código do item">
             </div>
 
             <div>
                 <h3>Formato</h3>
+                <select name="formato" id="format">
+                    <option value="A3V" selected>A3 - VERTICAL</option>
+                    <option value="A4V">A4 - VERTICAL</option>                    
+                    <option value="A5V">A5 - VERTICAL</option>
+                    <option value="A3H">A3 - HORIZONTAL</option>
+                    <option value="A4H">A4 - HORIZONTAL</option>
+                    <option value="A5H">A5 - HORIZONTAL</option>
+                </select>
             </div>
 
             <div>
-                <h3>Evento</h3>
+                <h3>Tipo de cartaz</h3>
+                <select name="tipo" id="type">
+                    <option value="DeP" selected>DE / POR</option>  
+                    <option value="AVista">À VISTA</option>
+                    <option value="LmPm">LEVE MAIS, PAGUE MENOS</option>
+                    <option value="Aplicativo">APLICATIVO</option>
+                    <option value="Ofertao">OFERTÃO</option>
+                    <option value="Terceiro_Preco">TERCEIRO PREÇO</option>
+                    <option value="Parcelamento">PARCELAMENTO CARTÕES</option>
+                </select>
             </div>
 
             <div>
-                <h3>Dinamica Comercial</h3>
+                <h3>Campanha</h3>
+                <select name="campanha" id="campaign">
+                    <option value="" selected></option>                    
+                </select>
             </div>
         </section>
 
-        <section>
+        <section class="formulario" id="informacoes-cartaz">
             <div>
                 <h3>Detalhes do Produto</h3>
             </div>
