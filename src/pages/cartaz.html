@@ -9,80 +9,81 @@
 <body>
     <header>
         <section class="cabecalho">
+            <!--Cabeçalho-->
             <h1>Pricetag</h1>
         </section>
     </header>
     <main>
-        <section class="formulario" id="fundo-cartaz">
-            <div>
-                <input type="text" placeholder="Insira código do item">
-            </div>
+        <article id="opcoes">                <!--Ajuste das opções do site-->
+            <section class="formulario" id="fundo-cartaz">
+                <div class="caracteristicas">
+                    <h3>Código do Item</h3>
+                    <input class="in" type="text" id="campo-codigo" placeholder="Insira código do item">
+                </div>
+                <div class="caracteristicas">
+                    <h3>Formato</h3>
+                    <select class="in" name="formato" id="campo-formato">
+                        <option value="A3V" selected>A3 - VERTICAL</option>
+                        <option value="A4V">A4 - VERTICAL</option>
+                        <option value="A5V">A5 - VERTICAL</option>
+                        <option value="A3H">A3 - HORIZONTAL</option>
+                        <option value="A4H">A4 - HORIZONTAL</option>
+                        <option value="A5H">A5 - HORIZONTAL</option>
+                    </select>
+                </div>
+                <div class="caracteristicas">
+                    <h3>Tipo de cartaz</h3>
+                    <select class="in" name="tipo" id="campo-tipo">
+                        <option value="DeP" selected>DE / POR</option>
+                        <option value="AVista">À VISTA</option>
+                        <option value="LmPm">LEVE MAIS, PAGUE MENOS</option>
+                        <option value="Aplicativo">APLICATIVO</option>
+                        <option value="Ofertao">OFERTÃO</option>
+                        <option value="Terceiro_Preco">TERCEIRO PREÇO</option>
+                        <option value="Parcelamento">PARCELAMENTO CARTÕES</option>
+                    </select>
+                </div>
+                <div class="caracteristicas">
+                    <h3>Campanha</h3>
+                    <select class="in" name="campanha" id="campo-campanha">
+                        <option value="Oferta" selected>OFERTA</option>
+                        <option value="SFM" >SUPER FIM DE MÊS</option>
+                        <option value="Mono" >MONOCOLOR</option>
+                        <option value="Primeiro" >PRIMEIRO PREÇO</option>
+                        <option value="Bulnez" >BULNEZ</option>
+                        <option value="BDD" >BOA DO DIA</option>
+                        <option value="Boteco" >BOTECO</option>
+                        <option value="Arrasadoras" >OFERTAS ARRASADORAS</option>
+                        <option value="Padaria" >PADARIA</option>
+                        <option value="Parceirao" >PARCEIRÃO</option>
+                        <option value="SextaArr" >SEXTA ARRASADORA</option>
+                        <option value="SuperSexta" >SUPER SEXTA</option>
+                    </select>
+                </div>
+            </section>
+            <section class="formulario" id="informacoes-cartaz">
+                <div class="caracteristicas">
+                    <h3>Detalhes do Produto</h3>
+                    <input class="in" type="text" id="campo-detalhes" placeholder="Insira nome do item">
+                </div>
+                <div class="caracteristicas">
+                    <h3>Complemento</h3>
+                    <input class="in" type="text" id="campo-complemento" placeholder="Insira complemento">
+                </div>
+                <div class="caracteristicas">
+                    <h3>Preço</h3>
+                    <input class="in" type="text" id="campo-preco" inputmode="numeric">
+                </div>
+                <div class="caracteristicas">
+                    <h3>Periodo da Oferta</h3>
+                    <input class="in" type="date" name="" id="">
+                </div>
+            </section>
+        </article>
+        <section>
 
-            <div>
-                <h3>Formato</h3>
-                <select name="formato" id="format">
-                    <option value="A3V" selected>A3 - VERTICAL</option>
-                    <option value="A4V">A4 - VERTICAL</option>                    
-                    <option value="A5V">A5 - VERTICAL</option>
-                    <option value="A3H">A3 - HORIZONTAL</option>
-                    <option value="A4H">A4 - HORIZONTAL</option>
-                    <option value="A5H">A5 - HORIZONTAL</option>
-                </select>
-            </div>
-
-            <div>
-                <h3>Tipo de cartaz</h3>
-                <select name="tipo" id="type">
-                    <option value="DeP" selected>DE / POR</option>  
-                    <option value="AVista">À VISTA</option>
-                    <option value="LmPm">LEVE MAIS, PAGUE MENOS</option>
-                    <option value="Aplicativo">APLICATIVO</option>
-                    <option value="Ofertao">OFERTÃO</option>
-                    <option value="Terceiro_Preco">TERCEIRO PREÇO</option>
-                    <option value="Parcelamento">PARCELAMENTO CARTÕES</option>
-                </select>
-            </div>
-
-            <div>
-                <h3>Campanha</h3>
-                <select name="campanha" id="campaign">
-                    <option value="Oferta" selected>OFERTA</option>
-                    <option value="SFM" >SUPER FIM DE MÊS</option>
-                    <option value="Mono" >MONOCOLOR</option>
-                    <option value="Primeiro" >PRIMEIRO PREÇO</option>
-                    <option value="Bulnez" >BULNEZ</option>
-                    <option value="BDD" >BOA DO DIA</option>
-                    <option value="Boteco" >BOTECO</option>
-                    <option value="Arrasadoras" >OFERTAS ARRASADORAS</option>
-                    <option value="Padaria" >PADARIA</option>
-                    <option value="Parceirao" >PARCEIRÃO</option>
-                    <option value="SextaArr" >SEXTA ARRASADORA</option>
-                    <option value="SuperSexta" >SUPER SEXTA</option>                  
-                </select>
-            </div>
-        </section>
-
-        <section class="formulario" id="informacoes-cartaz">
-            <div>
-                <h3>Detalhes do Produto</h3>
-                <input type="text" placeholder="Insira nome do item">
-            </div>
-
-            <div>
-                <h3>Complemento</h3>
-                <input type="text" placeholder="Insira complemento">
-            </div>
-
-            <div>
-                <h3>Preços</h3>
-                <input type="number" name="" id="">
-            </div>
-
-            <div>
-                <h3>Periodo da Oferta</h3>
-                <input type="date" name="" id="">
-            </div>
         </section>
     </main>
 </body>
+<script src="../js/cartaz.js"></script>
 </html>
