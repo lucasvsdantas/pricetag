@@ -1,10 +1,22 @@
 
+function interligar(idCampo, idPreview, padrao = ""){
+    const campo = document.getElementById(idCampo);
+    const alvo = document.getElementById(idPreview);
+
+    const atualizar = () => alvo.textContent = campo.value || padrao;
+
+    campo.addEventListener("input", atualizar);
+    campo.addEventListener("change", atualizar);
+    atualizar();
+}
+
 //Função para o campo Preço
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
 
     const campoPreco = document.getElementById("campo-preco");
-    
-    campoPreco.addEventListener("input", function() {
+    const prevPreco = document.getElementById("prev-preco");
+
+    campoPreco.addEventListener("input", function () {
 
         // Pega apenas os números digitados
         let valor = this.value.replace(/\D/g, "");
@@ -18,6 +30,23 @@ document.addEventListener("DOMContentLoaded", function() {
             currency: "BRL"
         });
 
-    });
+        // Atualização em tempo real do campo preço na Preview
+        prevPreco.textContent = this.value;
 
+        if (valor === "") {
+            this.value = "";
+            prevPreco.textContent = "R$ 0,00";
+            return;
+        }
+    });
+    // Atualização em tempo real dos demais campos
+    interligar("campo-detalhes", "prev-detalhes", "Laranja Pera");
+    interligar("campo-complemento", "prev-complemento");
+    
 });
+
+
+
+
+
+
