@@ -1,5 +1,6 @@
 
 function interligar(idCampo, idPreview, padrao = ""){
+    
     const campo = document.getElementById(idCampo);
     const alvo = document.getElementById(idPreview);
 
@@ -21,6 +22,11 @@ document.addEventListener("DOMContentLoaded", function () {
         // Pega apenas os números digitados
         let valor = this.value.replace(/\D/g, "");
 
+        if (valor === "") {
+            this.value = "";
+            prevPreco.textContent = "R$ 0,00";
+            return;
+        }
         // Converte para centavos
         valor = Number(valor) / 100;
 
@@ -32,12 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Atualização em tempo real do campo preço na Preview
         prevPreco.textContent = this.value;
-
-        if (valor === "") {
-            this.value = "";
-            prevPreco.textContent = "R$ 0,00";
-            return;
-        }
+        
     });
     // Atualização em tempo real dos demais campos
     interligar("campo-detalhes", "prev-detalhes", "Laranja Pera");

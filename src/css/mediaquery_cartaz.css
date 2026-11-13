@@ -1,0 +1,12 @@
+
+@media (max-width: 925px){
+
+    main{
+        flex-direction: column;
+        gap: 20px;
+    }
+    #opcoes{
+        width: 100%;
+    }
+
+}
